@@ -18,18 +18,13 @@ HARDWARE USED
 ----------------------------------------------------------------------
 
 
-- ATSAMD21BLDC24V-STK1 Atmel LV BLDC Starter Kit  
-  https://www.microchip.com/en-us/development-tool/atsamd21bldc24v-stk1
+- [ATSAMD21BLDC24V-STK1 Atmel LV BLDC Starter Kit](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/UserGuides/Atmel-42681-SMART-ARM-based-Motor-Control-Kit_UserGuide.pdf)
 
-- dsPIC33CK64MC105 Curiosity Nano
-  https://www.microchip.com/en-us/development-tool/dm320211
+- [dsPIC33CK64MC105 Curiosity Nano](https://www.microchip.com/en-us/development-tool/ev88g73a)
 
 - SCT013-050 current transformer (50A → 1V output)  
-  OEM reference: https://en.opensensors.io/sct013-050  
-  Alternative datasheet: https://www.yhdc.com/en/product/425/
 
 - Breadboard and jumper wires  
-  (General-purpose prototyping accessories – no official link)
 
 - PC with MPLAB X and MotorBench v2.5 beta  
   MPLAB X IDE: https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide  
