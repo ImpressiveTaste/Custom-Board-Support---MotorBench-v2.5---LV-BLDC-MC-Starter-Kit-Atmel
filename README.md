@@ -1,4 +1,6 @@
-This document describes the workflow for creating Custom Board Support for MotorBench v2.5 in order to test and evaluate the Atmel Low Voltage BLDC Motor Control Starter Kit. It includes hardware setup, YAML creation, verification steps, X2C Scope integration, and related references.
+This document describes the workflow for creating Custom Board Support for MotorBench v2.5 in order to test and evaluate the Atmel Low Voltage BLDC Motor Control Starter Kit. It includes hardware setup, YAML creation, verification steps, X2C Scope integration, and related references. 
+
+[Custom Baord Support with motorBench](https://microchiptech.github.io/mcaf-doc/8.0.1/implementation/custom-board-support/index.html)
 
 ![Image 5](./Image%20(5).jpg)
 
