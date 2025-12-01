@@ -13,51 +13,70 @@ This project covers:
 - Using MCAF Test Harness for evaluation
 - Providing project files (CustomBoardTest1.X) and motor XML
 
-----------------------------------------------------------------------  
-HARDWARE USED  
+----------------------------------------------------------------------
+HARDWARE USED
 ----------------------------------------------------------------------
 
+
 - ATSAMD21BLDC24V-STK1 Atmel LV BLDC Starter Kit  
+  https://www.microchip.com/en-us/development-tool/atsamd21bldc24v-stk1
+
 - dsPIC33CK64MC105 Curiosity Nano 2  
-- SCT013-050 current transformer  
+  https://www.microchip.com/en-us/development-tool/dm320211
+
+- SCT013-050 current transformer (50A → 1V output)  
+  OEM reference: https://en.opensensors.io/sct013-050  
+  Alternative datasheet: https://www.yhdc.com/en/product/425/
+
 - Breadboard and jumper wires  
+  (General-purpose prototyping accessories – no official link)
+
 - PC with MPLAB X and MotorBench v2.5 beta  
+  MPLAB X IDE: https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide  
+  MotorBench 2.5: https://www.microchip.com/en-us/tools-resources/develop/motor-control/motorbench
 
 The system reads two phase currents (up to approx. 8.25 A) and the DC-link voltage (up to approx. 50 V).
 
-----------------------------------------------------------------------  
-REQUIRED DOCUMENTATION  
+----------------------------------------------------------------------
+REQUIRED DOCUMENTATION
 ----------------------------------------------------------------------
 
 Download and read before starting:
 
 1. MotorBench 2.50 – Information Guide  
+   (official link) https://www.microchip.com/en-us/tools-resources/develop/motor-control/motorbench
 
-2. Board Definition Notes (Dec 19, 2024)  
+2. X2Cscope – Real-time variable visualization  
+   https://www.microchip.com/en-us/tools-resources/develop/model-based-design/x2cscope
 
-3. Atmel LV BLDC YAML (Custom Board)  
+3. MCAF – Motor Control Application Framework  
+   https://www.microchip.com/en-us/tools-resources/develop/motor-control/mcaf
 
-4. Atmel BLDC Motor XML settings  
+4. Atmel LV BLDC YAML (Custom Board)  
+   ./Atmel-LVBLDC.yaml
 
-5. Atmel LV BLDC Hardware User’s Guide  
+5. Atmel BLDC Motor XML settings  
+   ./AtmelBLDC-motor.xml
+
+6. Atmel LV BLDC Hardware User’s Guide  
    https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/UserGuides/Atmel-42681-SMART-ARM-based-Motor-Control-Kit_UserGuide.pdf
 
-----------------------------------------------------------------------  
-CREATING THE CUSTOM BOARD YAML  
+----------------------------------------------------------------------
+CREATING THE CUSTOM BOARD YAML
 ----------------------------------------------------------------------
 
 The YAML was created in VS Code using the StarterBoard example from MotorBench.
 
 Notes:
-- Indentation must use spaces (no tabs).  
-- Reference examples can be obtained by exporting the YAMLs for MCLV-2, MCLV-48V, or MCHV boards.  
-- The completed file is: Atmel-LVBLDC.yaml  
+- Indentation must use spaces (no tabs).
+- Reference examples can be obtained by exporting the YAMLs for MCLV-2, MCLV-48V, or MCHV boards.
+- The completed file is: Atmel-LVBLDC.yaml
 
 ATPLL estimator was chosen due to better startup behavior.  
 Startup velocity was increased from the default.
 
-----------------------------------------------------------------------  
-X2C SCOPE CONTROL (NO HARDWARE UI)  
+----------------------------------------------------------------------
+X2C SCOPE CONTROL (NO HARDWARE UI)
 ----------------------------------------------------------------------
 
 Because no buttons or potentiometers are used, all runtime interaction is done through X2C Scope.
@@ -70,11 +89,11 @@ stopMotorRequest = stop motor
 VelocityReference = desired speed (negative value reverses direction)
 
 Notes:
-- motorDirection and direction variables are not used.  
-- Direction is controlled only by the sign of VelocityReference.  
+- motorDirection and direction variables are not used.
+- Direction is controlled only by the sign of VelocityReference.
 
-----------------------------------------------------------------------  
-USING THE TEST HARNESS  
+----------------------------------------------------------------------
+USING THE TEST HARNESS
 ----------------------------------------------------------------------
 
 Enable by editing "options.h":
@@ -83,57 +102,93 @@ Enable by editing "options.h":
 
 This activates the MCAF test harness for controlled testing.
 
-----------------------------------------------------------------------  
-PRE–CLOSED-LOOP VERIFICATION  
+----------------------------------------------------------------------
+PRE–CLOSED-LOOP VERIFICATION
 ----------------------------------------------------------------------
 
 Before enabling closed-loop control, these steps were completed:
 
-1. Voltage mode and forced commutation (see Board Definition Notes).  
-2. Verify PWM polarity and timing.  
-3. Verify phase current scaling using SCT013-050.  
-4. Verify DC-link voltage scaling.  
+1. Voltage mode and forced commutation (see Board Definition Notes).
+2. Verify PWM polarity and timing.
+3. Verify phase current scaling using SCT013-050.
+4. Verify DC-link voltage scaling.
 5. After all readings matched expectations, closed loop was tested.
 
 Closed-loop FOC worked without extensive tuning.
 
-----------------------------------------------------------------------  
-PROJECT FILES  
+----------------------------------------------------------------------
+PROJECT FILES
 ----------------------------------------------------------------------
 
-MPLAB X Project (CustomBoardTest1.X):  
+Atmel-LVBLDC.yaml  
+./Atmel-LVBLDC.yaml
 
 Motor parameters (AtmelBLDC-motor.xml):  
+./AtmelBLDC-motor.xml
 
-----------------------------------------------------------------------  
-REPOSITORY STRUCTURE (SUGGESTED)  
+MPLAB X Project (CustomBoardTest1.X):  
+(not uploaded but directory expected)
+
+----------------------------------------------------------------------
+REPOSITORY IMAGES
+----------------------------------------------------------------------
+
+Wiring / board photos:
+![Image 5](./Image%20(5).jpg)
+![Image 9](./Image%20(9).jpg)
+![Image 10](./Image%20(10).jpg)
+![Image 11](./Image%20(11).jpg)
+![Image 12](./Image%20(12).jpg)
+![Image 13](./Image%20(13).jpg)
+
+MotorBench & tool screenshots:
+![Screenshot 1](./image2025-1-10_17-13-58.png)
+![Screenshot 2](./image2025-1-29_14-33-37.png)
+
+These image files are included in the repository:
+- Image (5).jpg
+- Image (9).jpg
+- Image (10).jpg
+- Image (11).jpg
+- Image (12).jpg
+- Image (13).jpg
+- image2025-1-10_17-13-58.png
+- image2025-1-29_14-33-37.png
+
+----------------------------------------------------------------------
+REPOSITORY STRUCTURE (SUGGESTED)
 ----------------------------------------------------------------------
 
 Custom-BoardSupport-MotorBench-AtmelLVBLDC/
 │
 ├── README.txt
+├── README.md (same content)
 ├── Atmel-LVBLDC.yaml
+├── AtmelBLDC-motor.xml
 ├── CustomBoardTest1.X/
 │   └── ...
-├── AtmelBLDC-motor.xml
-└── docs/
-    ├── wiring_photos/
-    ├── board-definition-notes.pdf
-    └── MB2.5-information-guide.pdf
+├── Image (5).jpg
+├── Image (9).jpg
+├── Image (10).jpg
+├── Image (11).jpg
+├── Image (12).jpg
+├── Image (13).jpg
+├── image2025-1-10_17-13-58.png
+└── image2025-1-29_14-33-37.png
 
-----------------------------------------------------------------------  
-NOTES AND OBSERVATIONS  
+----------------------------------------------------------------------
+NOTES AND OBSERVATIONS
 ----------------------------------------------------------------------
 
-- ATPLL provided better startup performance than default estimators.  
-- Current sensors saturate around 8–8.5 A; avoid exceeding this.  
-- Direction is changed using negative speed, not configuration flags.  
-- YAML spacing is critical; tabs cause MotorBench to reject the file.  
+- ATPLL provided better startup performance than default estimators.
+- Current sensors saturate around 8–8.5 A; avoid exceeding this.
+- Direction is changed using negative speed, not configuration flags.
+- YAML spacing is critical; tabs cause MotorBench to reject the file.
 - Closed loop worked once current and voltage scaling were verified.
 
-
-----------------------------------------------------------------------  
-ACKNOWLEDGMENTS  
+----------------------------------------------------------------------
+ACKNOWLEDGMENTS
 ----------------------------------------------------------------------
 
-This work was completed using MotorBench v2.5 , the Microchip Motor Control Application Framework (MCAF), and the Atmel LV BLDC Motor Control Starter Kit.  
+This work was completed using MotorBench v2.5, the Microchip Motor Control Application Framework (MCAF), X2Cscope, and the Atmel LV BLDC Motor Control Starter Kit.
+
