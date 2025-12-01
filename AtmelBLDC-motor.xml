@@ -1,0 +1,47 @@
+<!--WE DO NOT RECOMMEND MANUAL EDITING OF THIS FILE. THIS IS A GENERATED FILE. EDITING THIS FILE MAY CAUSE ITS IMPORT INTO motorBench® Development Suite TO FAIL WITHOUT ANY WARNING OR NOTIFICATION.-->
+<pmsm>
+<pmsmMotorState>
+   <handle>New Hurst300</handle>
+   <nickname>AtmelBLDC</nickname>
+   <mfrCompanyName>Atmel</mfrCompanyName>
+   <mfrMotorName>42BL02402-0026B-002</mfrMotorName>
+   <mfrPartNumber>LDO</mfrPartNumber>
+   <mfrAdditionalInfo/>
+   <mchpDirectPartNumber>AC300022</mchpDirectPartNumber>
+   <nameplate>
+      <namePlateRatedCurrentContinuous>1.6 A</namePlateRatedCurrentContinuous>
+      <namePlateRatedPeakCurrent>1.6 A</namePlateRatedPeakCurrent>
+      <namePlateRatedVoltage>24 V</namePlateRatedVoltage>
+      <namePlateBaseSpeed>418.879020478639080000 rad/s</namePlateBaseSpeed>
+      <namePlateRatedSpeed>586.430628670094712000 rad/s</namePlateRatedSpeed>
+   </nameplate>
+   <other>
+      <fullscaleBaseRatio>1.5 one</fullscaleBaseRatio>
+      <polePairs>4.0 one</polePairs>
+   </other>
+   <version>2.15</version>
+</pmsmMotorState>
+<motorParameters>
+   <Rs>
+      <active>0.90 Ω_line_to_neutral</active>
+   </Rs>
+   <Ld>
+      <active>0.001200 H_line_to_neutral</active>
+   </Ld>
+   <Lq>
+      <active>0.001200 H_line_to_neutral</active>
+   </Lq>
+   <Ke>
+      <active>0.03352696245304807058 V/rad/s</active>
+   </Ke>
+   <B>
+      <active>0.0000322134 one</active>
+   </B>
+   <Tf>
+      <active>0.0048125 one</active>
+   </Tf>
+   <J>
+      <active>0.000018079199999999998 one</active>
+   </J>
+</motorParameters>
+</pmsm>
