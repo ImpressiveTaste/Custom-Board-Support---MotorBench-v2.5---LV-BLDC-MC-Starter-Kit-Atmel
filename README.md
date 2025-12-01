@@ -15,7 +15,7 @@ This project covers:
 - Running forced-commutation tests before closed-loop
 - Using X2C Scope for runtime control (no hardware buttons)
 - Using MCAF Test Harness for evaluation
-- Providing project files (CustomBoardTest1.X) and motor XML
+- Providing custom board file (YAML) and motor (XML) for motorBench easy import
 
 ----------------------------------------------------------------------
 HARDWARE USED
