@@ -84,6 +84,9 @@ Enable by editing "options.h":
 
 This activates the MCAF test harness for controlled testing.
 
+A clear video tutorial on how to use the MCAF Test Harness is available here:  
+https://youtu.be/coQ6g_wADSU
+
 ----------------------------------------------------------------------
 PRE–CLOSED-LOOP VERIFICATION
 ----------------------------------------------------------------------
