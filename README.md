@@ -113,9 +113,6 @@ Atmel-LVBLDC.yaml
 Motor parameters (AtmelBLDC-motor.xml):  
 ./AtmelBLDC-motor.xml
 
-MPLAB X Project (CustomBoardTest1.X):  
-(not uploaded but directory expected)
-
 ----------------------------------------------------------------------
 REPOSITORY IMAGES
 ----------------------------------------------------------------------
