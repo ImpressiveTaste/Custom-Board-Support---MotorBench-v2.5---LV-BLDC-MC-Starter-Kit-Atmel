@@ -28,33 +28,18 @@ HARDWARE USED
 
 - PC with MPLAB X and MotorBench v2.5 beta  
   MPLAB X IDE: https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide  
-  MotorBench 2.5: https://www.microchip.com/en-us/tools-resources/develop/motor-control/motorbench
-
+ [motorBench](https://www.microchip.com/en-us/solutions/technologies/motor-control-and-drive/motorbench-development-suite)
 The system reads two phase currents (up to approx. 8.25 A) and the DC-link voltage (up to approx. 50 V).
 
 ----------------------------------------------------------------------
 REQUIRED DOCUMENTATION
 ----------------------------------------------------------------------
 
-Download and read before starting:
+Read before starting:
 
-1. MotorBench 2.50 – Information Guide  
-   (official link) https://www.microchip.com/en-us/tools-resources/develop/motor-control/motorbench
+1. [X2Cscope – Real-time variable visualization  ](https://x2cscope.github.io/)
 
-2. X2Cscope – Real-time variable visualization  
-   https://www.microchip.com/en-us/tools-resources/develop/model-based-design/x2cscope
-
-3. MCAF – Motor Control Application Framework  
-   https://www.microchip.com/en-us/tools-resources/develop/motor-control/mcaf
-
-4. Atmel LV BLDC YAML (Custom Board)  
-   ./Atmel-LVBLDC.yaml
-
-5. Atmel BLDC Motor XML settings  
-   ./AtmelBLDC-motor.xml
-
-6. Atmel LV BLDC Hardware User’s Guide  
-   https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/UserGuides/Atmel-42681-SMART-ARM-based-Motor-Control-Kit_UserGuide.pdf
+2. [MCAF – Motor Control Application Framework](https://microchiptech.github.io/mcaf-doc/8.0.1/)
 
 ----------------------------------------------------------------------
 CREATING THE CUSTOM BOARD YAML
