@@ -137,27 +137,6 @@ These image files are included in the repository:
 - image2025-1-29_14-33-37.png
 
 ----------------------------------------------------------------------
-REPOSITORY STRUCTURE (SUGGESTED)
-----------------------------------------------------------------------
-
-Custom-BoardSupport-MotorBench-AtmelLVBLDC/
-│
-├── README.txt
-├── README.md (same content)
-├── Atmel-LVBLDC.yaml
-├── AtmelBLDC-motor.xml
-├── CustomBoardTest1.X/
-│   └── ...
-├── Image (5).jpg
-├── Image (9).jpg
-├── Image (10).jpg
-├── Image (11).jpg
-├── Image (12).jpg
-├── Image (13).jpg
-├── image2025-1-10_17-13-58.png
-└── image2025-1-29_14-33-37.png
-
-----------------------------------------------------------------------
 NOTES AND OBSERVATIONS
 ----------------------------------------------------------------------
 
