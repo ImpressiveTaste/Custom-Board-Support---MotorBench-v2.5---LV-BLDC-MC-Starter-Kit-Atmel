@@ -21,7 +21,7 @@ HARDWARE USED
 - ATSAMD21BLDC24V-STK1 Atmel LV BLDC Starter Kit  
   https://www.microchip.com/en-us/development-tool/atsamd21bldc24v-stk1
 
-- dsPIC33CK64MC105 Curiosity Nano 2  
+- dsPIC33CK64MC105 Curiosity Nano
   https://www.microchip.com/en-us/development-tool/dm320211
 
 - SCT013-050 current transformer (50A → 1V output)  
